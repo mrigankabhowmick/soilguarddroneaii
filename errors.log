@@ -1,0 +1,26 @@
+src/app/about/page.tsx(6,85): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/api/reports/pdf/route.ts(71,39): error TS2345: Argument of type 'Buffer<ArrayBufferLike>' is not assignable to parameter of type 'BodyInit | null | undefined'.
+  Type 'Buffer<ArrayBufferLike>' is missing the following properties from type 'URLSearchParams': size, append, delete, get, and 2 more.
+src/app/checkout/page.tsx(6,79): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/contact/page.tsx(6,68): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/dashboard/page.tsx(10,111): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/drone-analysis/page.tsx(6,83): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/features/page.tsx(11,8): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/login/page.tsx(6,60): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/page.tsx(6,93): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/app/shop/page.tsx(6,42): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/components/Chatbot.tsx(4,65): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/components/Footer.tsx(2,56): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/components/Navbar.tsx(5,72): error TS2307: Cannot find module 'lucide-react' or its corresponding type declarations.
+src/lib/authOptions.ts(59,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | null | undefined' is not assignable to type 'StringQueryTypeCasting | undefined'.
+      Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+        Type 'string | null | undefined' is not assignable to type 'StringQueryTypeCasting | undefined'.
+          Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+src/lib/authOptions.ts(60,13): error TS2769: No overload matches this call.
+  The last overload gave the following error.
+    Type 'string | null | undefined' is not assignable to type 'StringQueryTypeCasting | undefined'.
+      Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.
+        Type 'string | null | undefined' is not assignable to type 'StringQueryTypeCasting | undefined'.
+          Type 'null' is not assignable to type 'StringQueryTypeCasting | undefined'.

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer components {
+  .container {
+    width: 100%;
+
+    @media (min-width: 640px) {
+      max-width: 640px;
+    }
+
+    @media (min-width: 768px) {
+      max-width: 768px;
+    }
+
+    @media (min-width: 1024px) {
+      max-width: 1024px;
+    }
+
+    @media (min-width: 1280px) {
+      max-width: 1280px;
+    }
+
+    @media (min-width: 1536px) {
+      max-width: 1536px;
+    }
+  }
+}
+
+
+@layer theme {
+  :root {
+    --background: #f8fafc;
+    /* light earthy tone / slate-50 */
+    --foreground: #0f172a;
+
+    --primary: #16a34a;
+    /* green-600 */
+    --primary-foreground: #ffffff;
+
+    --secondary: #e2e8f0;
+    --secondary-foreground: #0f172a;
+
+    --accent: #22c55e;
+    --accent-foreground: #ffffff;
+
+    --border: #e2e8f0;
+
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.5);
+  }
+
+  .dark {
+    --background: #020617;
+    /* slate-950 */
+    --foreground: #f8fafc;
+
+    --primary: #22c55e;
+    --primary-foreground: #020617;
+
+    --secondary: #1e293b;
+    --secondary-foreground: #f8fafc;
+
+    --accent: #16a34a;
+    --accent-foreground: #ffffff;
+
+    --border: #1e293b;
+
+    --glass-bg: rgba(15, 23, 42, 0.7);
+    --glass-border: rgba(30, 41, 59, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased font-sans selection:bg-green-500/20 selection:text-green-600;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/70 dark:bg-slate-900/70 backdrop-blur-md border border-white/50 dark:border-slate-800/50 shadow-xl;
+  }
+
+  .glass-card {
+    @apply bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border border-white/60 dark:border-slate-800/60 shadow-lg hover:shadow-2xl transition-all duration-300 rounded-3xl;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}

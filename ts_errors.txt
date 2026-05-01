@@ -1,0 +1,25 @@
+﻿.next/dev/types/validator.ts(207,31): error TS2344: Type 'typeof import("C:/Users/Hrishikesh Jha/Desktop/Soil Guard Antigravity/SoilGuard/src/app/api/products/[id]/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/products/[id]">'.
+  Types of property 'PUT' are incompatible.
+    Type '(req: Request, { params }: { params: { id: string; }; }) => Promise<NextResponse<{ error: string; }> | NextResponse<{ success: boolean; product: any; }>>' is not assignable to type '(request: NextRequest, context: { params: Promise<{ id: string; }>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{ id: string; }>; }' is not assignable to type '{ params: { id: string; }; }'.
+          Types of property 'params' are incompatible.
+            Property 'id' is missing in type 'Promise<{ id: string; }>' but required in type '{ id: string; }'.
+.next/dev/types/validator.ts(252,31): error TS2344: Type 'typeof import("C:/Users/Hrishikesh Jha/Desktop/Soil Guard Antigravity/SoilGuard/src/app/api/upload/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/upload">'.
+  The types returned by 'POST(...)' are incompatible between these types.
+    Type 'Promise<unknown>' is not assignable to type 'void | Response | Promise<void | Response>'.
+      Type 'Promise<unknown>' is not assignable to type 'Promise<void | Response>'.
+        Type 'unknown' is not assignable to type 'void | Response'.
+.next/types/validator.ts(207,31): error TS2344: Type 'typeof import("C:/Users/Hrishikesh Jha/Desktop/Soil Guard Antigravity/SoilGuard/src/app/api/products/[id]/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/products/[id]">'.
+  Types of property 'PUT' are incompatible.
+    Type '(req: Request, { params }: { params: { id: string; }; }) => Promise<NextResponse<{ error: string; }> | NextResponse<{ success: boolean; product: any; }>>' is not assignable to type '(request: NextRequest, context: { params: Promise<{ id: string; }>; }) => void | Response | Promise<void | Response>'.
+      Types of parameters '__1' and 'context' are incompatible.
+        Type '{ params: Promise<{ id: string; }>; }' is not assignable to type '{ params: { id: string; }; }'.
+          Types of property 'params' are incompatible.
+            Property 'id' is missing in type 'Promise<{ id: string; }>' but required in type '{ id: string; }'.
+.next/types/validator.ts(224,39): error TS2307: Cannot find module '../../src/app/api/razorpay/create-order/route.js' or its corresponding type declarations.
+.next/types/validator.ts(261,31): error TS2344: Type 'typeof import("C:/Users/Hrishikesh Jha/Desktop/Soil Guard Antigravity/SoilGuard/src/app/api/upload/route")' does not satisfy the constraint 'RouteHandlerConfig<"/api/upload">'.
+  The types returned by 'POST(...)' are incompatible between these types.
+    Type 'Promise<unknown>' is not assignable to type 'void | Response | Promise<void | Response>'.
+      Type 'Promise<unknown>' is not assignable to type 'Promise<void | Response>'.
+        Type 'unknown' is not assignable to type 'void | Response'.
