@@ -31,7 +31,6 @@ export async function POST(req: Request) {
             const lowerMsg = message.toLowerCase();
             let reply = "";
 
-            const responses: any = {
             const responses: Record<string, Record<string, string>> = {
                 greeting: {
                     en: "Hello! I am Krishi Sathi (offline mode). Ask me about farming, soil, or products.",
