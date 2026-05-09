@@ -1,0 +1,51 @@
+﻿
+> soilguard-app@0.1.0 build
+> next build
+
+Ôû▓ Next.js 16.1.6 (Turbopack)
+- Environments: .env.local
+
+  Creating an optimized production build ...
+Ô£ô Compiled successfully in 4.9s
+  Running TypeScript ...
+  Collecting page data using 11 workers ...
+  Generating static pages using 11 workers (0/25) ...
+  Generating static pages using 11 workers (6/25) 
+  Generating static pages using 11 workers (12/25) 
+  Generating static pages using 11 workers (18/25) 
+Ô£ô Generating static pages using 11 workers (25/25) in 445.4ms
+  Finalizing page optimization ...
+
+Route (app)
+Ôöî Ôùï /
+Ôö£ Ôùï /_not-found
+Ôö£ Ôùï /about
+Ôö£ Ôùï /admin
+Ôö£ ãÆ /api/admin/orders
+Ôö£ ãÆ /api/auth/[...nextauth]
+Ôö£ ãÆ /api/auth/signup
+Ôö£ ãÆ /api/chat
+Ôö£ ãÆ /api/checkout
+Ôö£ ãÆ /api/orders
+Ôö£ ãÆ /api/products
+Ôö£ ãÆ /api/products/[id]
+Ôö£ ãÆ /api/reports
+Ôö£ ãÆ /api/reports/pdf
+Ôö£ ãÆ /api/summarize
+Ôö£ ãÆ /api/upload
+Ôö£ ãÆ /api/users
+Ôö£ Ôùï /checkout
+Ôö£ Ôùï /contact
+Ôö£ Ôùï /dashboard
+Ôö£ Ôùï /drone-analysis
+Ôö£ Ôùï /features
+Ôö£ Ôùï /login
+Ôö£ Ôùï /orders
+Ôöö Ôùï /shop
+
+
+ãÆ Proxy (Middleware)
+
+Ôùï  (Static)   prerendered as static content
+ãÆ  (Dynamic)  server-rendered on demand
+

@@ -28,7 +28,7 @@ export async function POST(req: Request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    return new Promise<NextResponse>((resolve, reject) => {
+    return new Promise<Response>((resolve) => {
       const uploadStream = cloudinary.uploader.upload_stream(
         { folder: 'soilguard_uploads' },
         (error, result) => {

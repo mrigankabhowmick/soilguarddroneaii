@@ -4,14 +4,14 @@ import { authOptions } from '@/lib/authOptions';
 import connectToDatabase from '@/lib/db';
 import Product from '@/models/Product';
 
-export async function PUT(req: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function PUT(req: Request, context: { params: Promise<{ id: string }> }) {
   try {
     const session = await getServerSession(authOptions);
     if (!session || session.user?.role !== "Admin") {
       return NextResponse.json({ error: "Access Denied" }, { status: 403 });
     }
 
-    const { id } = await params;
+    const { id } = await context.params;
     const body = await req.json();
 
     await connectToDatabase();
@@ -30,14 +30,14 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
   }
 }
 
-export async function DELETE(req: Request, { params }: { params: Promise<{ id: string }> }) {
+export async function DELETE(req: Request, context: { params: Promise<{ id: string }> }) {
   try {
     const session = await getServerSession(authOptions);
     if (!session || session.user?.role !== "Admin") {
       return NextResponse.json({ error: "Access Denied" }, { status: 403 });
     }
 
-    const { id } = await params;
+    const { id } = await context.params;
     await connectToDatabase();
 
     const deletedProduct = await Product.findByIdAndDelete(id);

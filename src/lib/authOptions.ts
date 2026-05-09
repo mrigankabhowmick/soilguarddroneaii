@@ -56,11 +56,11 @@ export const authOptions: NextAuthOptions = {
 
         if (!dbUser) {
           dbUser = await User.create({
-            name: user.name || "Google User",
-            email: user.email || "",
+            name: user.name ?? "Google User",
+            email: user.email ?? "",
             authProvider: "google",
             role: "Customer"
-          });
+          } as any);
         }
         // Attach role to user object so it's available in the jwt callback
         user.role = dbUser.role;

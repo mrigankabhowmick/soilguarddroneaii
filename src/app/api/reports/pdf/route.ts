@@ -68,9 +68,12 @@ export async function GET(req: Request) {
         });
     });
 
-    const response = new NextResponse(new Uint8Array(pdfBuffer));
-    response.headers.set('Content-Type', 'application/pdf');
-    response.headers.set('Content-Disposition', `attachment; filename=Soil_Report_${report._id}.pdf`);
+    const response = new Response(pdfBuffer as any, {
+      headers: {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': `attachment; filename=Soil_Report_${report._id}.pdf`,
+      },
+    });
 
     return response;
   } catch (error: any) {
