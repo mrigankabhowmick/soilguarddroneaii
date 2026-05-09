@@ -22,7 +22,7 @@ async function connectToDatabase() {
       bufferCommands: false,
     };
 
-    cached.promise = mongoose.connect(MONGODB_URI, opts).then((m: typeof mongoose) => {
+    cached.promise = mongoose.connect(MONGODB_URI, opts).then((m) => {
       return m;
     });
   }

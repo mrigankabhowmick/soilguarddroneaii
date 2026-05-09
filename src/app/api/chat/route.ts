@@ -32,6 +32,7 @@ export async function POST(req: Request) {
             let reply = "";
 
             const responses: any = {
+            const responses: Record<string, Record<string, string>> = {
                 greeting: {
                     en: "Hello! I am Krishi Sathi (offline mode). Ask me about farming, soil, or products.",
                     hi: "नमस्ते! मैं कृषि साथी हूँ (ऑफलाइन मोड)। आप खेती, मिट्टी या उत्पादों के बारे में पूछ सकते हैं।",
@@ -59,20 +60,20 @@ export async function POST(req: Request) {
             };
 
             if (lowerMsg.includes("hi") || lowerMsg.includes("hello") || lowerMsg.includes("namaskar")) {
-                reply = responses.greeting[language];
+                reply = (responses.greeting as any)[language] || responses.greeting.en;
             } else if (lowerMsg.includes("npk")) {
-                reply = responses.npk[language];
+                reply = (responses.npk as any)[language] || responses.npk.en;
             } else if (lowerMsg.includes("soil") || lowerMsg.includes("moisture")) {
-                reply = responses.soil[language];
+                reply = (responses.soil as any)[language] || responses.soil.en;
             } else if (lowerMsg.includes("product") || lowerMsg.includes("buy") || lowerMsg.includes("sell")) {
-                reply = responses.products[language];
+                reply = (responses.products as any)[language] || responses.products.en;
             } else {
-                reply = {
+                reply = ({
                     en: `I understand your query: "${message}". Please connect API for advanced AI response.`,
                     hi: `मैं आपके प्रश्न को समझता हूँ: "${message}"। कृपया AI सक्षम करने के लिए API जोड़ें।`,
                     bn: `আমি আপনার প্রশ্ন বুঝেছি: "${message}"। সম্পূর্ণ AI ব্যবহারের জন্য API যোগ করুন।`,
-                    ur: `میں آپ کے سوال کو سمجھتا ہوں: "${message}"۔ مکمل AI کے لیے API شامل کریں۔`
-                }[language];
+                    ur: `میں آپ کے سوال کو سمجھتا ہوں: "${message}"। مکمل AI کے لیے API شامل کریں۔`
+                } as any)[language] || `I understand your query: "${message}".`;
             }
 
             return NextResponse.json({ reply });
